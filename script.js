@@ -1,9 +1,9 @@
 function toggleStyle(textId, styleProp, value) {
   const element = document.getElementById(`text-${textId}`);
-  if (element.style[styleProp] === value) {
-    element.style[styleProp] = 'none'; 
+  if (styleProp === 'textDecoration') {
+    element.style[styleProp] = element.style[styleProp] === value ? 'none' : value;
   } else {
-    element.style[styleProp] = value; 
+    element.style[styleProp] = element.style[styleProp] === value ? 'normal' : value;
   }
 }
 
