@@ -1,6 +1,10 @@
 function toggleStyle(textId, styleProp, value) {
   const element = document.getElementById(`text-${textId}`);
-  element.style[styleProp] = element.style[styleProp] === value ? 'normal' : value;
+  if (element.style[styleProp] === value) {
+    element.style[styleProp] = 'none'; 
+  } else {
+    element.style[styleProp] = value; 
+  }
 }
 
 function setFontSize(textId, fontSize) {
